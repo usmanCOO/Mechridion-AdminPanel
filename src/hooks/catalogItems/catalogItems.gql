@@ -1,0 +1,16 @@
+query {
+  catalogItems(shopIds: "cmVhY3Rpb24vc2hvcDoyTGJuZHdZWXRCWmtnQzRSUQ==") {
+    edges {
+      node {
+        ... on CatalogItemProduct {
+          product {
+            EngineInformation
+            EngineTechnology
+            Images
+            FuelInformation
+          }
+        }
+      }
+    }
+  }
+}

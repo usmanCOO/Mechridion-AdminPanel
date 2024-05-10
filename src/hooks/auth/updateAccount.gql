@@ -1,0 +1,8 @@
+mutation updateAccount($accountId: ID $isDeleted: Boolean isActive: Boolean) {
+  updateAccount(input: { accountId: $accountId isDeleted:$isDeleted isActive:$isActive }) {
+    account {
+      _id
+      primaryEmailAddress
+    }
+  }
+}

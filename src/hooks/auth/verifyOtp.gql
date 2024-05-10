@@ -1,0 +1,3 @@
+mutation verifyOtp($email: String!, $otp: String!) {
+  verifyOtp(email: $email, otp: $otp)
+}

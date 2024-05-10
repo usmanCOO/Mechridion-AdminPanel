@@ -1,0 +1,33 @@
+mutation createService(service:{$name:String,$description:String,$imageLink:String,options:[{$name:String,$price:Float,$imageLink:String,$description:String}]}){
+  createService(
+    input: {
+      service: {
+        name: $name
+        description: $description
+        imageLink: $imageLink
+        options: [
+          {
+            name: $name
+            price: $price
+            description: $description
+            imageLink: $imageLink
+          }
+        
+        ]
+      }
+      shopId: "cmVhY3Rpb24vc2hvcDpwR1J5Wm1ibTZCcHBMOEVRRg=="
+    }
+  ) {
+    _id
+    name
+    options {
+      name
+      price
+      description
+      imageLink
+    }
+    description
+    imageLink
+    createdAt
+  }
+}

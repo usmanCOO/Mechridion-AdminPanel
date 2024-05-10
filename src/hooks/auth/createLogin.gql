@@ -1,0 +1,18 @@
+mutation authenticate(
+  $email: String!
+  $password: String!
+  $serviceName: String!
+) {
+  authenticate(
+    serviceName: $serviceName
+    params: { password: $password, user: { email: $email } }
+  ) {
+    tokens {
+      accessToken
+      refreshToken
+    }
+    user {
+      id
+    }
+  }
+}

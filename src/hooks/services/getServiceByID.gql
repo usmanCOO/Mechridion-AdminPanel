@@ -1,0 +1,13 @@
+query getServiceByID($id: ID!) {
+  getServiceByID(id: $id) {
+    name
+    _id
+    description
+    imageLink
+    options {
+      name
+      price
+      description
+    }
+  }
+}
